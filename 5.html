@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<div id="clock"></div>
+
+<body>
+    <script>
+        function currentTime() {
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+
+            if (hours > 12) {
+                hours = hours - 12;
+            }
+
+            hours = (hours < 10) ? "0" + hours : hours;
+            minutes = (minutes < 10) ? "0" + minutes : minutes;
+            seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+            let time = hours + ":" + minutes + ":" + seconds + " " + s;
+
+            document.getElementById("clock").innerText = time;
+            let t = setInterval(function () {
+                currentTime()
+            }, 1000);
+        }
+        currentTime();
+
+        // function Clock() {
+        //     this.cur_date = new Date();
+        //     this.hours = this.cur_date.getHours();
+        //     this.minutes = this.cur_date.getMinutes();
+        //     this.seconds = this.cur_date.getSeconds();
+        // }
+        // Clock.prototype.run = function () {
+        //     setInterval(this.update.bind(this), 1000);
+        // };
+        // Clock.prototype.update = function () {
+        //     this.updateTime(1);
+        //     console.log(this.hours + ":" + this.minutes + ":" + this.seconds);
+        // };
+        // Clock.prototype.updateTime = function (secs) {
+        //     this.seconds += secs;
+        //     if (this.seconds >= 60) {
+        //         this.minutes++;
+        //         this.seconds = 0;
+        //     }
+        //     if (this.minutes >= 60) {
+        //         this.hours++;
+        //         this.minutes = 0;
+        //     }
+        //     if (this.hours >= 24) {
+        //         this.hours = 0;
+        //     }
+        // };
+        // var clock = new Clock();
+        // clock.run();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var student = {
+            name: "david rayy",
+            sclass: "VI",
+            rollno: 12,
+            age: 23,
+        }
+        function getData(student) {
+           var k;
+           var l=student;
+           var size=0;
+           for(k in l){
+            
+            if(l.hasOwnProperty(k)){
+                size++;
+            }
+           }
+           return size;
+        }
+         console.log(getData(student));
+        
+    </script>
+
+</body>
+
+</html>

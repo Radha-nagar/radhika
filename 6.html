@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        var library = [
+            {
+                author: "Bill gates",
+                title: "The road ahead",
+                libraryId: 1254
+            },
+            {
+                author: "Steve jobs",
+                title: "Walter Isaacson",
+                libraryId: 4264
+            },
+            {
+                author: "Suzanne Collins",
+                title: "Mockingjay:the final book of the hunger games",
+                libraryId: 3245
+            }
+        ];
+        function sub(x, y) {
+            if (x.title < y.title) {
+                return -1
+            }
+            if (x.title > y.title) {
+                return 1
+            }
+            // return (`${val.author}, ${val.title},${val.readingStatus}`)
+        }
+        // console.log(library.sorting(sort));
+        let arr = library.sort(sub).map((val) => {
+            return(`${val.author},${val.title},${val.libraryId}<br>`)
+            for (let i = 0; i < words.length; i++) {
+            str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+        }
+        console.log(result);
+        })
+        document.write(arr);
+    </script>
+</body>
+
+</html>
